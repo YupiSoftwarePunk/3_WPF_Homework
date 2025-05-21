@@ -1,0 +1,138 @@
+﻿<Window x:Class="_3_WPF_Homework.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:_3_WPF_Homework"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800"
+        WindowState="Maximized">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.6*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="0.5*"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid Grid.Column="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <Viewbox Grid.Row="0">
+                <TextBlock Text="Наши лучшие работы"
+                           FontSize="22"
+                           HorizontalAlignment="Center"
+                           VerticalAlignment="Center"
+                           Foreground="DarkGray"
+                           FontFamily="Impact"
+                           Margin="30 0 30 0"/>
+            </Viewbox>
+
+            <ScrollViewer Grid.Row="1">
+                <StackPanel>
+                    <StackPanel>
+                        <Image Source="1.jpg" MaxHeight="150px"/>
+                        <TextBlock Text="Антон"
+                            FontSize="16"
+                            HorizontalAlignment="Center" VerticalAlignment="Center"
+                            Foreground="Black"
+                            FontFamily="Impact"
+                            Margin="4"/>
+                    </StackPanel>
+
+                    <StackPanel>
+                        <Image Source="2.jpg" MaxHeight="150px"/>
+                        <TextBlock Text="Не Антон"
+                            FontSize="16"
+                            HorizontalAlignment="Center"
+                            VerticalAlignment="Center"
+                            Foreground="Black"
+                            FontFamily="Impact"
+                            Margin="4"/>
+                    </StackPanel>
+
+                    <StackPanel>
+                        <Image Source="3.jpg" MaxHeight="150px"/>
+                        <TextBlock Text="Антоша"
+                            FontSize="16"
+                            HorizontalAlignment="Center"
+                            VerticalAlignment="Center"
+                            Foreground="Black"
+                            FontFamily="Impact"
+                            Margin="4"/>
+                    </StackPanel>
+
+                    <StackPanel>
+                        <Image Source="4.jpg" MaxHeight="150px"/>
+                        <TextBlock Text="Антончик"
+                            FontSize="16"
+                            HorizontalAlignment="Center"
+                            VerticalAlignment="Center"
+                            Foreground="Black"
+                            FontFamily="Impact"
+                            Margin="4"/>
+                    </StackPanel>
+                </StackPanel>
+                
+            </ScrollViewer>
+        </Grid>
+
+        <StackPanel Grid.Column="1">
+            <TabControl>
+                <TabItem Header="Инструменты">
+                    <StackPanel>
+                        <Menu>
+                            <MenuItem Header="Файл">
+                                <MenuItem Header="Новый"/>
+                                <MenuItem Header="Открыть"/>
+                            </MenuItem>
+                            <MenuItem Header="Редактировать">
+                                <MenuItem Header="Обрезать">
+                                    <MenuItem Header="Обрезать квадрат"/>
+                                    <MenuItem Header="Произвольная обрезка"/>
+                                </MenuItem>
+                                <MenuItem Header="Изменить цвет"/>
+                            </MenuItem>
+                        </Menu>
+
+                        <TextBlock Text="Услуги"
+                                   FontSize="23"
+                                   FontFamily="Impact"/>
+
+                        <ListBox BorderThickness="0">
+                            <ListBoxItem Content="Фотография" FontSize="16"/>
+                            <ListBoxItem Content="Ретуширование" FontSize="16"/>
+                            <ListBoxItem Content="Исправление недостатков" FontSize="16"/>
+                            <ListBoxItem Content="Изменение фона" FontSize="16"/>
+                            <ListBox.ContextMenu>
+                                <ContextMenu>
+                                    <MenuItem Header="Редактировать"/>
+                                    <MenuItem Header="Удалить"/>
+                                    <MenuItem Header="Создать на основе"/>
+                                </ContextMenu>
+                            </ListBox.ContextMenu>
+                        </ListBox>
+                    </StackPanel>
+                </TabItem>
+
+                <TabItem Header="Расписание">
+                    
+                </TabItem>
+            </TabControl>
+        </StackPanel>
+
+        <StackPanel Grid.Column="2">
+            <Viewbox>
+                <Calendar>
+                    <Calendar.BlackoutDates>
+                        <CalendarDateRange Start="2025/05/01" End="2025/05/20">
+                            
+                        </CalendarDateRange>
+                    </Calendar.BlackoutDates>
+                </Calendar>
+            </Viewbox>
+        </StackPanel>
+    </Grid>
+</Window>
