@@ -19,11 +19,12 @@
             <RowDefinition Height="0.15*"/>
         </Grid.RowDefinitions>
 
-        <StackPanel Grid.Row="0" Grid.Column="0"
-                    HorizontalAlignment="Center" VerticalAlignment="Center">
+        <StackPanel Grid.Column="0" Grid.Row="0"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center">
             <TextBlock Text="Список дел" FontSize="26"/>
-
         </StackPanel>
+
 
         <ListBox Grid.Column="0"
                  Grid.Row="1"
@@ -84,8 +85,8 @@
 
         <StackPanel Grid.Row="2" Grid.Column="1"
                     HorizontalAlignment="Center" VerticalAlignment="Center">
-            <Button Content="Добавить дело" Background="#5EBEC4" 
-                    
+            <Button Content="Добавить дело" Background="#5EBEC4" >
+
                 <Button.ToolTip>
                     <ToolTip>
                         <TextBlock Text="При добавлении дела появится в списке слева, и его придется выполнить"/>
