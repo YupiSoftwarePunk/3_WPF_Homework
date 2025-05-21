@@ -92,12 +92,8 @@
                         <TextBlock Text="При добавлении дела появится в списке слева, и его придется выполнить"/>
                     </ToolTip>
                 </Button.ToolTip>
-
-
             </Button>
+            
         </StackPanel>
-        
-        
-
     </Grid>
 </Window>
