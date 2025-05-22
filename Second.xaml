@@ -97,6 +97,7 @@
                         <TextBlock Text="При добавлении дела появится в списке слева, и его придется выполнить"/>
                     </ToolTip>
                 </Button.ToolTip>
+                <ToolTipService.ShowDuration>10000</ToolTipService.ShowDuration>
             </Button>
             
         </StackPanel>

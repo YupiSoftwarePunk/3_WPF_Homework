@@ -30,7 +30,8 @@ namespace _3_WPF_Homework
             todo.Add(new ToDo("Дописать проект", new DateTime(2025, 5, 23), "Доделать проект по мобилкам"));
             todo.Add(new ToDo("Поиграть в компьютерную игру", new DateTime(2025, 5, 24), "Поиграть в Farming Simulator 22"));
             todo.Add(new ToDo("Дописать проект", new DateTime(2025, 5, 23), "Доделать проект с математическими классами"));
-            
+
+            listToDo.ItemsSource = null; 
             listToDo.ItemsSource = todo;
         }
 
@@ -51,9 +52,17 @@ namespace _3_WPF_Homework
 
         private void btnAdd(object sender, RoutedEventArgs e)
         {
-            var temp = dateToDo.SelectedDate.Value;
+            if (dateToDo.SelectedDate == null)
+            {
+                MessageBox.Show("Выберите дату!");
+                return;
+            }
 
-            todo.Add(new ToDo(titleToDo.Text, new DateTime(temp.Year, temp.Month, temp.Day), descriptionToDo.Text));
+            var temp = dateToDo.SelectedDate.Value;
+            todo.Add(new ToDo(titleToDo.Text, temp, descriptionToDo.Text));
+
+            listToDo.ItemsSource = null;
+            listToDo.ItemsSource = todo;
         }
 
         private void btnDelete(object sender, RoutedEventArgs e)
@@ -64,21 +73,24 @@ namespace _3_WPF_Homework
             }
             else
             {
-                todo.Remove(listToDo.SelectedItem as ToDo);
+                todo.Remove((ToDo)listToDo.SelectedItem);
+
+                listToDo.ItemsSource = null;
+                listToDo.ItemsSource = todo;
             }
         }
 
         public class ToDo
         {
-            private string name;
-            private DateTime dateTime;
-            private string discription;
+            public string Name { get; set; }
+            public DateTime Date { get; set; }
+            public string Description { get; set; }
 
-            public ToDo(string name, DateTime dateTime, string discription)
+            public ToDo(string name, DateTime date, string description)
             {
-                this.name = name;
-                this.dateTime = dateTime;
-                this.discription = discription;
+                Name = name;
+                Date = date;
+                Description = description;
             }
         }
     }
