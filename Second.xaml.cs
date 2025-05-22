@@ -30,13 +30,17 @@ namespace _3_WPF_Homework
             todo.Add(new ToDo("Дописать проект", new DateTime(2025, 5, 23), "Доделать проект по мобилкам"));
             todo.Add(new ToDo("Поиграть в компьютерную игру", new DateTime(2025, 5, 24), "Поиграть в Farming Simulator 22"));
             todo.Add(new ToDo("Дописать проект", new DateTime(2025, 5, 23), "Доделать проект с математическими классами"));
+            
             listToDo.ItemsSource = todo;
         }
 
 
         private void checkBoxChecked(object sender, RoutedEventArgs e)
         {
-            groupBoxToDo.Visibility = Visibility.Visible;
+            if (groupBoxToDo != null)
+            {
+                groupBoxToDo.Visibility = Visibility.Visible;
+            }
         }
 
         private void checkBoxUnchecked(object sender, RoutedEventArgs e)
@@ -48,6 +52,7 @@ namespace _3_WPF_Homework
         private void btnAdd(object sender, RoutedEventArgs e)
         {
             var temp = dateToDo.SelectedDate.Value;
+
             todo.Add(new ToDo(titleToDo.Text, new DateTime(temp.Year, temp.Month, temp.Day), descriptionToDo.Text));
         }
 
