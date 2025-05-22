@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("3_WPF_Homework")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f4b41bd5dcec5082db42c6fc09de0134857d8787")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6b4acc94699ddf34bec977f03e35134fe6994259")]
 [assembly: System.Reflection.AssemblyProductAttribute("3_WPF_Homework")]
 [assembly: System.Reflection.AssemblyTitleAttribute("3_WPF_Homework")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

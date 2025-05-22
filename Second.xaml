@@ -44,7 +44,10 @@
 
         <StackPanel Grid.Column="1" Grid.Row="0"
                     VerticalAlignment="Center">
-            <CheckBox Content="Добавление новых дел" IsChecked="True"/>
+            <CheckBox Content="Добавление новых дел" IsChecked="True" 
+                      IsThreeState="False" Checked="checkBoxChecked"
+                      Unchecked="checkBoxUnchecked"
+                      Visibility="{Binding IsGroupVisible}"/>
         </StackPanel>
 
         <GroupBox Grid.Column="1"
@@ -80,12 +83,14 @@
 
         <StackPanel Grid.Row="2" Grid.Column="0"
                     HorizontalAlignment="Center" VerticalAlignment="Center">
-            <Button Content="Удалить дела" Background="#5EBEC4" />
+            <Button Content="Удалить дела" Background="#5EBEC4" 
+                    Name="buttonDelete" Click="btnDelete" Padding="5"/>
         </StackPanel>
 
         <StackPanel Grid.Row="2" Grid.Column="1"
                     HorizontalAlignment="Center" VerticalAlignment="Center">
-            <Button Content="Добавить дело" Background="#5EBEC4" >
+            <Button Content="Добавить дело" Background="#5EBEC4" 
+                    Name="buttonAdd" Click="btnAdd" Padding="5">
 
                 <Button.ToolTip>
                     <ToolTip>
