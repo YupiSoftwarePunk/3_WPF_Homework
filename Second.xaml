@@ -70,12 +70,13 @@
                                 Name="dateToDo"/>
                 </StackPanel>
                 
-                <StackPanel>
+                <StackPanel Margin="2">
                     <TextBlock Text="Описание:" Margin="5"/>
-                    <TextBox MinLines="10" AcceptsReturn="True"
-                             AcceptsTab="True" Margin="5"
+                    <TextBox MinLines="5" AcceptsReturn="True"
+                             AcceptsTab="True" Margin="5"  Height="100"
                              BorderBrush="#5EBEC4"
-                             Name="descriptionToDo"/>
+                             Name="descriptionToDo"
+                             VerticalScrollBarVisibility="Visible"/>
                 </StackPanel>
                 
             </StackPanel>
